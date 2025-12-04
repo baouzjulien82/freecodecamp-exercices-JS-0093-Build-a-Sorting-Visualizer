@@ -18,3 +18,11 @@ function fillArrContainer(elmt, integersArray) {
     span.innerText = integersArray[Math.floor(Math.random() * integersArray.length)];
   }
 }
+
+function isOrdered(firstInteger, secondInteger) {
+  return firstInteger <= secondInteger;
+}
+
+function swapElements(integersArray, numericIndex) {
+  
+}
