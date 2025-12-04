@@ -5,3 +5,16 @@ function generateElement() {
 function generateArray() {
   return Array.from({length: 5}, generateElement)
 };
+
+function generateContainer() {
+  const container = document.createElement("div");
+  return container
+};
+
+function fillArrContainer(elmt, integersArray) {
+  for(let i = 5; i > 0; i--) {
+    const span = document.createElement("span")
+    elmt.appendChild(span)
+    span.innerText = integersArray[Math.floor(Math.random() * integersArray.length)];
+  }
+}
