@@ -24,5 +24,7 @@ function isOrdered(firstInteger, secondInteger) {
 }
 
 function swapElements(integersArray, numericIndex) {
-  
+  if(!isOrdered(integersArray[numericIndex], integersArray[numericIndex + 1])) {
+    [integersArray[numericIndex], integersArray[numericIndex + 1]] = [integersArray[numericIndex + 1], integersArray[numericIndex]]
+  }
 }
