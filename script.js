@@ -32,19 +32,38 @@ function isOrdered(firstInteger, secondInteger) {
 function swapElements(integersArray, numericIndex) {
   if(!isOrdered(integersArray[numericIndex], integersArray[numericIndex + 1])) {
     [integersArray[numericIndex], integersArray[numericIndex + 1]] = [integersArray[numericIndex + 1], integersArray[numericIndex]]
+    return true;
   }
+  return false;
 }
 
 function highlightCurrentEls(htmlElement, numericIndex) {
   htmlElement.children[numericIndex].style.border = "2px dashed red";
   htmlElement.children[numericIndex + 1].style.border = "2px dashed red";
 }
-
+let currentArray = []
 generateArrayBtn.addEventListener("click", () => {
-  fillArrContainer(startingArray, generateArray());
+  currentArray = generateArray();
+  startingArray.innerHTML = "";
+  fillArrContainer(startingArray, currentArray);
 })
 
 sortBtn.addEventListener("click", () => {
-  
-})
+  highlightCurrentEls(startingArray, 0);
+  let sorted = false;
+
+while (!sorted) {
+  sorted = true;
+  for (let i = 0; i < currentArray.length - 1; i++) {
+      const swapped = swapElements(currentArray, i);
+      if(swapped) {
+        sorted = false;
+      }
+      const container = generateContainer();
+      fillArrContainer(container, currentArray);
+      highlightCurrentEls(container, i);
+      arrayContainer.appendChild(container);
+    }
+  }
+});
 
