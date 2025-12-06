@@ -43,6 +43,12 @@ function highlightCurrentEls(htmlElement, numericIndex) {
 }
 let currentArray = []
 generateArrayBtn.addEventListener("click", () => {
+  Array.from(arrayContainer.children).forEach(child => {
+    if (child !== startingArray) {
+      child.remove();
+    }
+  });
+  sortBtn.style.visibility = "visible";
   currentArray = generateArray();
   startingArray.innerHTML = "";
   fillArrContainer(startingArray, currentArray);
@@ -50,6 +56,7 @@ generateArrayBtn.addEventListener("click", () => {
 
 sortBtn.addEventListener("click", () => {
   highlightCurrentEls(startingArray, 0);
+  sortBtn.style.visibility = 'hidden';
   let sorted = false;
 
 while (!sorted) {
