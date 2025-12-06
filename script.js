@@ -1,4 +1,4 @@
-const generateArray = document.getElementById("generate-btn");
+const generateArrayBtn = document.getElementById("generate-btn");
 const arrayContainer = document.getElementById("array-container");
 const startingArray = document.getElementById("starting-array");
 
@@ -34,10 +34,10 @@ function swapElements(integersArray, numericIndex) {
 }
 
 function highlightCurrentEls(htmlElement, numericIndex) {
-  htmlElement.children[numericIndex].style.border = "2px dashed red";;
-  htmlElement.children[numericIndex + 1].style.border = "2px dashed red";;
+  htmlElement.children[numericIndex].style.border = "2px dashed red";
+  htmlElement.children[numericIndex + 1].style.border = "2px dashed red";
 }
 
-generateArray.addEventListener("click", () => {
+generateArrayBtn.addEventListener("click", () => {
   
 })
