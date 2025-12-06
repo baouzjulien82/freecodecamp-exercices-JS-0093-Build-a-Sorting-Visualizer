@@ -48,7 +48,7 @@ generateArrayBtn.addEventListener("click", () => {
       child.remove();
     }
   });
-  sortBtn.style.visibility = "visible";
+  sortBtn.style.display = "flex";
   currentArray = generateArray();
   startingArray.innerHTML = "";
   fillArrContainer(startingArray, currentArray);
@@ -56,7 +56,7 @@ generateArrayBtn.addEventListener("click", () => {
 
 sortBtn.addEventListener("click", () => {
   highlightCurrentEls(startingArray, 0);
-  sortBtn.style.visibility = 'hidden';
+  sortBtn.style.display = "none";
   let sorted = false;
 
 while (!sorted) {
@@ -72,5 +72,6 @@ while (!sorted) {
       arrayContainer.appendChild(container);
     }
   }
+  arrayContainer.lastChild.style.border = "4px solid green";
 });
 
