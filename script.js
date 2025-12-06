@@ -1,4 +1,5 @@
 const generateArrayBtn = document.getElementById("generate-btn");
+const sortBtn = document.getElementById("sort-btn");
 const arrayContainer = document.getElementById("array-container");
 const startingArray = document.getElementById("starting-array");
 
@@ -42,3 +43,8 @@ function highlightCurrentEls(htmlElement, numericIndex) {
 generateArrayBtn.addEventListener("click", () => {
   fillArrContainer(startingArray, generateArray());
 })
+
+sortBtn.addEventListener("click", () => {
+  
+})
+
