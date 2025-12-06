@@ -75,3 +75,37 @@ while (!sorted) {
   arrayContainer.lastChild.style.border = "4px solid green";
 });
 
+// Version avec une apparition par étape avec setInterval()
+
+/* sortBtn.addEventListener("click", () => {
+  sortBtn.style.display = "none";
+  let i = 0;
+  let sorted = false;
+
+  const interval = setInterval(() => {
+    if (i >= currentArray.length - 1) {
+      // Fin d'une passe
+      if (sorted) {
+        clearInterval(interval);
+        arrayContainer.lastChild.style.border = "4px solid green"; // dernier état en vert
+        return;
+      }
+      // Nouvelle passe
+      i = 0;
+      sorted = true;
+    }
+
+    const swapped = swapElements(currentArray, i);
+    if (swapped) {
+      sorted = false;
+    }
+
+    const container = generateContainer();
+    fillArrContainer(container, currentArray);
+    highlightCurrentEls(container, i);
+    arrayContainer.appendChild(container);
+
+    i++;
+  }, 500); // délai de 500ms entre chaque étape
+}); */
+
