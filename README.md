@@ -1,1 +1,1 @@
-<strong>JavaScript Functional Programming</strong> - freecodecamp-exercices-JS-0093-Build-a-Sorting-Visualizer - 
+<strong>JavaScript Functional Programming</strong> - freecodecamp-exercices-JS-0093-Build-a-Sorting-Visualizer - https://baouzjulien82.github.io/freecodecamp-exercices-JS-0093-Build-a-Sorting-Visualizer/
