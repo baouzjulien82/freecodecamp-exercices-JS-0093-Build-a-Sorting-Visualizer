@@ -16,10 +16,11 @@ function generateContainer() {
 };
 
 function fillArrContainer(elmt, integersArray) {
-  for(let i = 5; i > 0; i--) {
-    const span = document.createElement("span")
-    elmt.appendChild(span)
-    span.innerText = integersArray[Math.floor(Math.random() * integersArray.length)];
+  elmt.innerHTML = "";
+  for (let i = 0; i < integersArray.length; i++) {
+    const span = document.createElement("span");
+    span.innerText = integersArray[i];
+    elmt.appendChild(span);
   }
 }
 
@@ -39,5 +40,5 @@ function highlightCurrentEls(htmlElement, numericIndex) {
 }
 
 generateArrayBtn.addEventListener("click", () => {
-  
+  fillArrContainer(startingArray, generateArray());
 })
